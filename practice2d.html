@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>bouncing cloud</title>
+        <style>
+            #mainContent
+            {
+                background-color:cadetblue;
+                padding: 10px;
+                width:600px;
+                height:400px;
+                overflow: hiddn;
+            }
+            #bigcloud{
+                animation:laxmi 2s infinite;
+                margin-left:100px;
+                margin-top:40px;
+            }
+            #smallcloud
+            {
+                animation:nutan 3s infinite;
+                margin-left:200px;
+                margin-top:100px;
+            }
+            @keyframes laxmi {
+                0%{
+                    transform:translate3d(50px,30px,0px);
+                    animation-timing-function:ease-in;
+                }
+                50%{
+                    transform: translate3d(50px,60px,0px);
+                    animation-timing-function:ease-out;
+                }
+                100%{
+                    transform:translate3d(50px,30px,0px);
+                }
+            }
+            @keyframes nutan {
+                0%{
+                    transform:translate3d(50px,40px,30px);
+                    animation-timing-function:ease-out;
+                }
+                50%
+                {
+                    transform:translate3d(50px,80px,30px);
+                }
+                100%{
+                    transform:translate3d(50px,40px,30px);
+                }
+            }
+            .cloud{
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainContent">
+            <img src="big.png" alt="bigcloude" height="150" width="" class="cloud" id="bigcloud"/>
+            <img src="small.png" alt="smallcloud" height="150" width="" class="cloud" id="smallcloud"/>
+        </div>
+    </body>
+</html>

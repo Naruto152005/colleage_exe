@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>bouncing cloud</title>
+    <style>
+        #mainContent
+        {
+            background-color:aqua;
+            width: 600px;
+            height: 350px;
+            border-radius:10px;
+            overflow: hidden;
+        }
+        #BigC
+        {
+            animation:bounce 3s infinite;
+            margin-left:100px;
+            margin-top:56px;
+        }
+        #smallC
+        {
+            animation:small 2s infinite;
+            margin-left:200px;
+            margin-top:150px;
+        }
+
+        @keyframes bounce
+        {
+            0%
+            {
+                transform:translate3d(50px,40px,0px)
+            }
+            50%
+            {
+                transform:translate3d(50px,60px,0px)
+            }
+            100%
+            {
+                transform:translate3d(50px,40px,0px)
+            }
+        }
+        @keyframes small
+        {
+            0%
+            {
+                transform:translate3d(50px,40px,0px)
+            }
+            50%
+            {
+                transform:translate3d(50px,60px,30px)
+            }
+            100%
+            {
+                transform:translate3d(50px,40px,0px)
+            }
+        }
+        .cloud
+        {
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainContent">
+        <img src="big.png" height="150px" width="200px" alt="bigcloud" id="BigC" class="cloud"/>
+        <img src="small.png" height="100px" width="150px" alt="smallcloud" id="SmallC" class ="cloud"/>
+    </div>
+</body>
+</html>

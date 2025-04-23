@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>bouncing cloud</title>
+        <style>
+            #mainContent
+            {
+                background-color:bisque;
+                border-radius: 30px;
+                padding: 10px;
+                width:600px;
+                height: 350px;
+                overflow:hidden;
+            }
+            #bigc
+            {
+                animation: yash 2s infinite;
+                margin-left: 100px;
+                margin-top:15px
+            }
+            #smallc
+            {
+                animation :yash2 3s infinite;
+                margin-left: 200px;
+                margin-top:65px;
+            }
+
+            @keyframes yash{
+                0%{
+                    transform:translate3d(50px,40px,0px);
+                    animation-timing-function:ease-in;
+                }
+                50%{
+                    transform:translate3d(50px,70px,0px);
+                    animation-timing-function:ease-out;
+                }
+                100%
+                {
+                    transform:translate3d(50px,40px,0px);
+                }
+
+            }
+            @keyframes yash2 {
+                0%{
+                    transform:translate3d(50px,40px,30px);
+                    animation-timing-function:ease-in;
+                }
+                50%{
+                    transform:translate3d(50px,90px,40px);
+                    animation-function-timing:ease-out;
+                }
+                100%
+                {
+                    transform:translate3d(50px,40px,30px);
+                }
+            }
+            .cloud{
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainContent">
+            <img src="big.png" alt="bigcloude" id="bigc" height="150"
+            width="255" class="cloud">
+            <img src="small.png" alt="smallcloude image" id="smallc" height="150" width="250" class="cloud"/>
+        </div>
+    </body>
+</html>
