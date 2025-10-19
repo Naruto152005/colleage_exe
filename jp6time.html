@@ -1,79 +1,189 @@
-<center><h1>Time Table</h1></center>
-<html>
-    <body>
-        <table border="5" cellspace="0" align="center">
-            <tr>
-                <td align="center" height="50" width="100"><br>
-                    <br>Day/period</td></td>
-                </td>
-            <td align="center" height="50" width="100">
-                <br>I<br>9:30-10:30
-            </td>
-            <td align="center" height="50" width="100">
-            <br>II <br>10:30-11:15
-        </td>
-        <td align="center" height="50" width="100">
-            <br>II <br>10:30-11:15
-        </td>
-        <td align="center" height="50" width="100">
-            <br><br>1:00-1:30
-        </td>
-        <td align="center" height="50" width="100">
-            <br>IV<br>10:30-11:15
-        </td>
-        <td align="center" height="50" width="100">
-            <br>VI <br>10:30-11:15
-        </td>
-        <td align="center" height="50" width="100">
-            <br>VII <br>10:30-11:15
-        </td>
-        <td align="center" height="50" width="100">
-            <br>VII <br>10:30-11:15
-        </td>
-            </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Monday</b>
-                <td align="center" height="50"> Eng</td>
-                <td align="center" height="50"> hindi</td>
-                <td align="center" height="50"> phy</td>
-                <td rowspan="6" align="center" height="50">
-                    <b>L <br>U <br>N <br>C <br>H</b>
-                </td>
-                <td colspan="3" align="center" height="50">Lab</td>
-                <td align="center" height="50">phy</td>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>tue
-                <td colspan="3" align="center" height="50">Lab</td>
-                <td align="center" height="50"> Eng</td>
-                <td align="center" height="50"> hindi</td>
-                <td align="center" height="50"> phy</td>
-                <td align="center" height="50">phy</td>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>wed
-                <td align="center" height="50"> Eng</td>
-                <td align="center" height="50"> hindi</td>
-                <td align="center" height="50"> phy</td>
-                <td align="center" height="50">phy</td>
-                <td colspan="3" align="center" height="50">Library</td>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Thursday</b>
-                <td align="center" height="50">ost</td>
-                <td align="center" height="50">o</td>
-                <td align="center" height="50">s</td>
-                <td colspan="3" align="center" height="50">Lab</td>
-                <td align="center" height="50">ot</td>
-            </td>
-        </tr>
-        </table>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Time Table</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #74ABE2, #5563DE);
+        margin: 0;
+        padding: 0;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        margin-top: 30px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        animation: slideDown 1.2s ease-in-out;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1000px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        border-radius: 15px;
+        overflow: hidden;
+        animation: fadeUp 1.5s ease-in-out;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    th {
+        background-color: #3333cc;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) td {
+        background-color: #ffffff;
+    }
+
+    td:hover {
+        background-color: #ffd54f;
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .lunch {
+        background-color: #ffb74d !important;
+        color: white !important;
+        font-weight: bold;
+        letter-spacing: 2px;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+        from { transform: translateY(-30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+        0% { background-color: #ffb74d; }
+        50% { background-color: #ffa726; }
+        100% { background-color: #ffb74d; }
+    }
+
+    /* Rounded corners */
+    table td:first-child {
+        font-weight: bold;
+        background: #f5f5f5;
+        color: #333;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        td, th {
+            padding: 10px;
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Weekly Time Table</h1>
+
+<table border="1">
+    <tr>
+        <th>Day / Period</th>
+        <th>I<br>9:30 - 10:30</th>
+        <th>II<br>10:30 - 11:15</th>
+        <th>III<br>11:15 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th>IV<br>1:00 - 1:45</th>
+        <th>V<br>1:45 - 2:30</th>
+        <th>VI<br>2:30 - 3:15</th>
+        <th>VII<br>3:15 - 4:00</th>
+    </tr>
+
+    <tr>
+        <td>Monday</td>
+        <td>English</td>
+        <td>Hindi</td>
+        <td>Physics</td>
+        <td class="lunch" rowspan="6">L<br>U<br>N<br>C<br>H</td>
+        <td colspan="3">Computer Lab</td>
+        <td>Math</td>
+    </tr>
+
+    <tr>
+        <td>Tuesday</td>
+        <td colspan="3">Electronics Lab</td>
+        <td>English</td>
+        <td>Hindi</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+    </tr>
+
+    <tr>
+        <td>Wednesday</td>
+        <td>English</td>
+        <td>Hindi</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td colspan="3">Library / Reading</td>
+    </tr>
+
+    <tr>
+        <td>Thursday</td>
+        <td>OST</td>
+        <td>OOPS</td>
+        <td>DBMS</td>
+        <td colspan="3">Project Lab</td>
+        <td>Math</td>
+    </tr>
+
+    <tr>
+        <td>Friday</td>
+        <td>DBMS</td>
+        <td>OOPS</td>
+        <td>OST</td>
+        <td>English</td>
+        <td colspan="3">Seminar</td>
+        
+    </tr>
+
+    <tr>
+        <td>Saturday</td>
+        <td colspan="3">Mini Project Work</td>
+        <td>English</td>
+        <td>Hindi</td>
+        <td>Math</td>
+        <td>Cultural</td>
+    </tr>
+</table>
+
+</body>
 </html>
